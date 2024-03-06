@@ -20,7 +20,10 @@ public class CheckoutService implements ICheckoutService{
         Double total = 0.0;
         for(String id: productIds){
             Product product = productService.getProduct(id);
-            total += product.getPrice()
+            total += product.getPrice();
         }
+        Checkout checkout = new Checkout("234","test.com",total.toString(),List.of("credit_cards"));
+
+        return checkout;
     }
 }
