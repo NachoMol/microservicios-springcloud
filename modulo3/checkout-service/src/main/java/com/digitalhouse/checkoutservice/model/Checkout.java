@@ -1,4 +1,4 @@
-package com.digitalhouse.checkoutservice.controller.model;
+package com.digitalhouse.checkoutservice.model;
 
 import java.util.List;
 
