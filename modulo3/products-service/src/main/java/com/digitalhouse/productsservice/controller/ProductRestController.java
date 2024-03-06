@@ -15,5 +15,5 @@ public class ProductRestController {
     public Product getProduct(@RequestParam String id){
         return new Product(id,"Notebook",2000.0);
     }
-    
+
 }

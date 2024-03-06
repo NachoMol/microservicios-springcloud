@@ -1,5 +1,6 @@
 package com.digitalhouse.checkoutservice.service;
 
+import com.digitalhouse.checkoutservice.dto.Product;
 import com.digitalhouse.checkoutservice.model.Checkout;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,8 @@ public class CheckoutService implements ICheckoutService{
     public Checkout buildCheckout(List<String> productIds) {
         Double total = 0.0;
         for(String id: productIds){
-            Product product
+            Product product = productService.getProduct(id);
+            total += product.getPrice()
         }
     }
 }
