@@ -13,7 +13,7 @@ public class ProductRestController {
 
     @GetMapping
     public Product getProduct(@RequestParam String id){
-        return new Product(id,"Notebook",2000.0, "test");
+        return new Product(id,"Notebook",2000.0, "Instance 2");
     }
 
 }
