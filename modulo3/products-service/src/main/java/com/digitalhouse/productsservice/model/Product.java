@@ -5,11 +5,21 @@ public class Product {
     private String id;
     private String name;
     private Double price;
+    private String instance;
 
-    public Product(String id, String name, Double price) {
+    public Product(String id, String name, Double price, String instance) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.instance = instance;
+    }
+
+    public String getInstance() {
+        return instance;
+    }
+
+    public void setInstance(String instance) {
+        this.instance = instance;
     }
 
     public String getId() {
@@ -42,6 +52,7 @@ public class Product {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", instance=" + instance +
                 '}';
     }
 }
