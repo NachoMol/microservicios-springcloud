@@ -11,9 +11,9 @@ cloud:
     gateway:
       routes:
         - id: checkout-service
-          uri: http://localhost:8082
+          uri: lb://checkout-service
           predicates:
-          - Path=/checkout
+            - Path=/checkout/**
 
 
 server:
