@@ -2,10 +2,7 @@ package com.digitalhouse.checkoutservice.controller;
 
 import com.digitalhouse.checkoutservice.model.Checkout;
 import com.digitalhouse.checkoutservice.service.ICheckoutService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,7 +17,11 @@ public class CheckoutRestController {
     }
 
     @GetMapping()
-    public Checkout getCheckout(@RequestParam List<String> productIds){
+    public Checkout getCheckout(@RequestParam List<String> productIds, @RequestHeader("X-Request-from") String requestFrom){
+        System.out.println("Enviado desde: " + requestFrom);
+        if(!requestFrom.equals("gateway")){
+            return null;
+        }
         return checkoutService.buildCheckout(productIds);
     }
 
