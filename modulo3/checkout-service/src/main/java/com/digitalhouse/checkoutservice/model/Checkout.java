@@ -17,6 +17,11 @@ public class Checkout {
         this.availableMethods = availableMethods;
     }
 
+    public Checkout(String id) {
+        super();
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
