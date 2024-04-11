@@ -26,7 +26,7 @@ public class ProductService implements IProductService{
     @CircuitBreaker(name="product",fallbackMethod ="getProductFallbackMethod")
     public Product getProduct(String id) {
 
-        return feignProductRepository.getProductById(id);
+        return feignProductRepository.getProductById(id,true);
     }
 
     public Product getProductFallbackMethod(String id, CallNotPermittedException exception){
