@@ -15,6 +15,9 @@ public class Product {
         this.instance = instance;
     }
 
+    public Product() {
+    }
+
     public String getInstance() {
         return instance;
     }
