@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "products",url = "http://localhost:8080")
+@FeignClient(name = "products",url = "http://localhost:8081")
 public interface FeignProductRepository {
 
     @RequestMapping(method = RequestMethod.GET,value = "/products")
