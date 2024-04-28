@@ -59,6 +59,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>notifications</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
