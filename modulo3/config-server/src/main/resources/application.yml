@@ -1,6 +1,11 @@
 server:
   port: 8889
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://checkout-service:8761/eureka/
+
 spring:
   application:
     name: config-server

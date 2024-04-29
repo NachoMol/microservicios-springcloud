@@ -7,7 +7,7 @@ services:
     ports:
       - 8081:8080
   payments-service:
-    build: payments-service/
+    build: payments/
     mem_limit: 512m
     ports:
       - 8082:8080
@@ -32,7 +32,7 @@ services:
     ports:
       - 8083:8080
   products-service:
-    build: products/
+    build: products-service/
     mem_limit: 512m
     ports:
       - 8084:8080
